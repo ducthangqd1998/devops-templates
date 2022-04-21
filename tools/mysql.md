@@ -1,5 +1,35 @@
 ### Install
 
+#### Amazon Linux 2
+
+**Step 1: Add MySQL Yum Repository to Amazon Linux 2**
+
+```shell
+sudo yum install https://dev.mysql.com/get/mysql80-community-release-el7-5.noarch.rpm
+```
+
+**Step 2: Install MySQL 8 on Amazon Linux 2**
+```shell
+sudo amazon-linux-extras install epel -y
+sudo yum -y install mysql-community-server
+```
+
+**Step 3: Start and Configure MySQL 8 on Amazon Linux 2**
+```
+sudo systemctl enable --now mysqld
+```
+
+A superuser account ‘root’@’localhost is created with initial password set and stored in the error log file. To reveal it, use the following command:
+
+```shell
+sudo grep 'temporary password' /var/log/mysqld.log
+```
+Use this initial password to harden the server.
+
+
+```shell
+sudo mysql_secure_installation -p
+```
 
 ### Change root password
 #### Centos 7
