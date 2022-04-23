@@ -53,6 +53,7 @@ Start nginx command
 sudo systemctl start nginx
 ```
 
+### Firewall Configure
 Open port 80 and 443 using firewall-cmd
 
 ```shell
@@ -64,4 +65,19 @@ sudo firewall-cmd --reload
 Verify that port 80 or 443 opened using ss command:
 ```shell
 sudo ss -tulpn
+```
+
+### Install Certbot
+
+Let’s install the EPEL package:
+```shell
+yum install epel-release
+```
+Then update the packages in the system to add the new package lists to the package manager:
+```shell
+yum update
+```
+Now, we will install certbot by running this command:
+```shell
+yum install certbot-nginx
 ```
