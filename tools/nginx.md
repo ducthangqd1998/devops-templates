@@ -73,6 +73,11 @@ Let’s install the EPEL package:
 ```shell
 yum install epel-release
 ```
+If the output is `No package epel-release available.`, you can install `epel` via ...
+```shell
+yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+```
 Then update the packages in the system to add the new package lists to the package manager:
 ```shell
 yum update
