@@ -86,3 +86,8 @@ Now, we will install certbot by running this command:
 ```shell
 yum install certbot-nginx
 ```
+
+Register domain with nginx server.
+```shell
+sudo certbot --nginx -d [domain-name]
+```

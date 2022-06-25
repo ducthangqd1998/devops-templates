@@ -45,3 +45,5 @@ Add the gitlab-runner user in sudoers group and set **NOPASSWD** as shown below
 gitlab-runner ALL=(ALL:ALL) ALL
 gitlab-runner ALL=(ALL) NOPASSWD: ALL
 ```
+### Ubuntu
+
